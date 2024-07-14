@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin flip game</title>
+  </head>
+  <body>
+    <script>
+      //6f-6h-6i-6j.
+      let randomNumber = Math.random();
+
+      let guess = 'heads';
+
+      let result = '';
+
+      randomNumber < 0.5 ? result = 'heads' : result = 'tails';
+      console.log(result);
+
+      guess === result ? console.log('You win!') : console.log('You lose!');
+    </script>
+  </body>
+</html>
