@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Excercise 8</title>
+  </head>
+  <body>
+    <script>
+      //8a. to 8e.
+      const product1 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      const product2 = {
+        name: 'blender',
+        price: 3045
+      };
+
+      const product3 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      const product4 = {
+        name: 'basketball',
+        price: 3000
+      };
+
+      const product5 = {
+        name: 'blender',
+        price: 3045
+      };
+
+      console.log(product1);
+
+      /*
+      product1.price += 500;
+      console.log(product1);
+      */
+
+      product1['delivery-time'] = '3 days';
+      console.log(product1);
+
+      console.log(comparePrice(product1, product2));
+      console.log(isSameProduct(product2, product5));
+      console.log(isSameProduct(product1, product4));
+
+      function comparePrice(product1, product2) {
+        if (product1.price > product2.price) {
+          return `${product2.name} is the cheaper product.`;
+        } else if (product1.price < product2.price) {
+          return `${product1.name} is the cheaper product.`;
+        } else if (product1.price === product2.price) {
+          return `The products have the same price.`;
+        }
+      };
+
+      function isSameProduct(product1, product2) {
+        if (product1.name === product2.name && product1.price === product2.price) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+
+      //8f.
+      const greeting = 'Good Morning';
+      console.log(greeting.toLocaleLowerCase());
+
+      //8g.
+      const test = 'test';
+      console.log(test.repeat(2));
+    </script>
+  </body>
+</html>
