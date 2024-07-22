@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      const myArray = [
+        10, 
+        20, 
+        30
+      ];
+      console.log(myArray);
+
+      console.log(myArray[1]);
+
+      myArray[0] = 99;
+      console.log(myArray);
+
+      [1, 'hello', true, { name: 'socks' } [1, 2]]
+
+      //this displays object, because an array is a special type of object.
+      console.log(typeof [1, 2]);
+
+      //this tells us if an object is an array.
+      console.log(Array.isArray([1, 2]));
+
+      //because they are objects they also have propertyes and methods
+      console.log(myArray.length);
+
+      myArray.push(100);
+      console.log(myArray);
+
+      //first number is index, second number is the number of values we want removed
+      myArray.splice(0, 1);
+      console.log(myArray);
+    </script>
+  </body>
+</html>
