@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Excercise 9</title>
+  </head>
+  <body>
+    9a.
+    <button class="js-button-9a">9a</button>
+    <br><br>
+
+    9b.
+    <button class="js-button-9b">9b</button>
+    <br><br>
+
+    9c.
+    <button onclick="
+      displayChoice('heads');
+    ">heads</button>
+
+    <button onclick="
+      displayChoice('tails');
+    ">tails</button>
+
+    <p class="js-choice-paragraph"></p>
+    <br>
+
+    9d-9e-9f.
+    <input class="js-name-input" onkeydown="
+      handleSubmitKeydown(event);
+    ">
+
+    <button onclick="
+      displayName();
+    ">Submit</button>
+
+    <p class="js-name-display"></p>
+
+    9h.
+    <input class="js-input-type" onkeyup="
+      displayTyping();
+    ">
+
+    <p class="js-typing-display"></p>
+
+    <script>
+      //9a.
+      console.log(document.querySelector('.js-button-9a'));
+
+      //9b.
+      document.querySelector('.js-button-9b')
+        .innerHTML = '9b done!';
+
+      //9c.
+      function displayChoice(choice) {
+        document.querySelector('.js-choice-paragraph')
+          .innerHTML = `You chose: ${choice}`
+      }
+
+      //9d.
+      function displayName() {
+        const inputText = document.querySelector('.js-name-input');
+        let name = inputText.value;
+
+        document.querySelector('.js-name-display')
+          .innerHTML = `Your name is: ${name}`;
+      }
+
+      //9e-9f.
+      function handleSubmitKeydown(event) {
+        if (event.key === 'Enter') {
+          displayName();
+        }
+      }
+
+      //9h.
+      function displayTyping() {
+        const inputType = document.querySelector('.js-input-type');
+        let typedText = inputType.value;
+
+        document.querySelector('.js-typing-display')
+          .innerHTML = typedText;
+      }
+
+    </script>
+  </body>
+</html>
