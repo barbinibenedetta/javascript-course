@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Excercise 11</title>
+  </head>
+  <body> 
+    <script>
+      //11a.
+      const nums = [10, 20, 30];
+      console.log(nums);
+
+      nums[2] = 99;
+      console.log(nums);
+
+      //11b.
+      function getLastValue(array) {
+        return array[array.length - 1]
+      }
+
+      console.log(getLastValue([1, 20, 22, 24, 5]));
+      console.log(getLastValue(['hi', 'hello', 'good']));
+
+      //11c.
+      function arraySwap(array) {
+        if (array.length > 1); {
+        const firstValue = array[0];
+        array[0] = array[array.length - 1];
+        array[array.length - 1] = firstValue;
+      }
+      return array;
+    }
+      console.log(arraySwap([1, 20, 22, 24, 5]));
+      console.log(arraySwap(['hi', 'hello', 'good']));
+
+      //11d.
+      for (let i = 0; i < 11; i += 2) {
+        console.log(i);
+      }
+
+      //11e.
+      for (let i = 5; i >= 0; i--) {
+        console.log(i);
+      }
+
+      //11f.
+      let i = 0;
+
+      while (i <= 10) {
+        console.log(i);
+        i += 2;
+      }
+
+      let i2 = 5;
+
+      while (i2 >= 0) {
+        console.log(i2);
+        i2--;
+      }
+
+      //11g.
+      let numbers = [1, 2, 3];
+
+      for (let i = 0; i < numbers.length; i++) {
+        numbers[i] += 1;
+      }
+      console.log(numbers);
+
+      //11h.
+      function addOne(array) {
+        for (let i = 0; i < array.length; i++) {
+        array[i] += 1;
+        }
+        return array;
+      }
+
+      console.log(addOne([1, 2, 3]));
+      console.log(addOne([-2, -1, 0, 99]));
+
+      //11i.
+      function addNum(array, num) {
+        for (let i = 0; i < array.length; i++) {
+          array[i] += num;
+        }
+        return array;
+      }
+
+      console.log(addNum([1, 2, 3], 2));
+      console.log(addNum([1, 2, 3], 3));
+      console.log(addNum([-2, -1, 0, 99], 2));
+
+      //11j
+      function addArrays(array1, array2) {
+        let result = [];
+        if (array1.length === array2.length) {
+          for (let i = 0; i < array1.length; i++) {
+            result.push(array1[i] + array2[i]);
+          }
+          return result;
+        }
+      }
+
+      console.log(addArrays([1, 1, 2], [1, 1, 3]));
+      console.log(addArrays([1, 2, 3], [4, 5, 6]));
+
+      //11k.
+      function countPositive(nums) {
+        let result = 0;
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] > 0) {
+            result++;
+          }
+        }
+        return result;
+      }
+
+      console.log(countPositive([1, -3, 5]));
+      console.log(countPositive([-2, 3, -5, 7, 10]));
+
+      //11l-m.
+      function minMax(nums) {
+        if (nums.length < 1) {
+          return 'min: null, max: null'
+        } else if (nums.length > 0 && nums.length < 2) {
+          return `min: ${nums[0]}, max: ${nums[0]}`
+        } else {
+          let min = nums[0];
+          let max = nums[0];
+          for (let i = 1; i < nums.length; i++) { 
+            if (nums[i] < min) {
+              min = nums[i]
+            } 
+            if (nums[i] > max) {
+              max = nums[i]
+            }
+          }
+          return `min: ${min}, max: ${max}`
+        }
+      }
+
+      console.log(minMax([1, -3, 5]));
+      console.log(minMax([-2, 3, -5, 7, 10]));
+      console.log(minMax([]));
+      console.log(minMax([3]));
+
+      //11n.
+      function countWords(words) {
+        let count = {};
+
+        for (let i = 0; i < words.length; i++) {
+          let wrd = words[i];
+
+          if (count[wrd]) {
+            count[wrd]++;
+          } else {
+            count[wrd] = 1;
+          }
+        }
+        return count;
+      }
+
+      console.log(countWords(['apple', 'grape', 'apple', 'apple']))
+    </script>
+  </body>
+</html>
