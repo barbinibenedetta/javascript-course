@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      //11o. 11p.
+      array1 = ['hello', 'world', 'search', 'good'];
+      array2 = ['not', 'found'];
+      array3 = ['hello', 'world', 'search', 'good', 'search']
+
+      function searchForSearch (array) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === 'search') {
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      console.log(searchForSearch(array1));
+      console.log(searchForSearch(array2));
+      console.log(searchForSearch(array3));
+
+      //11q.
+      array4 = ['green', 'red', 'blue', 'red'];
+      
+      function findIndex(array, word) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      console.log(findIndex(array4, 'red'));
+      console.log(findIndex(array4, 'yellow'));
+
+      //11r. 11s. 11t. 11u.
+      array5 = ['egg', 'apple', 'egg', 'egg', 'ham'];
+
+      function removeEgg(foods) {
+        const result = [];
+        let eggCounter = 0;
+        const reverse = foods.slice().reverse();
+
+        for (let i = 0; i < foods.length; i++) {
+            if (reverse[i] === 'egg' && eggCounter < 2) {
+              eggCounter++;
+              continue;
+            }
+            result.push(reverse[i]);
+        }
+        return result.reverse();
+      }
+
+      console.log(removeEgg(array5));
+      console.log(array5);
+
+      //11v.
+      for (let i = 1; i <= 20; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log('FizzBuzz')
+        } else if (i % 3 === 0) {
+          console.log('Fizz');
+        } else if (i % 5 === 0) {
+          console.log('Buzz');
+        } else {
+          console.log(i);
+        }
+      }
+
+      //11w.
+      array6 = ['red', 'green', 'green', 'red'];
+
+      function unique(array) {
+        let noDuplicates = [];
+
+        for (i = 0; i < array.length; i++) {
+          if (findIndex(noDuplicates, array[i]) === -1) {
+            noDuplicates.push(array[i]);
+          }
+        }
+        return noDuplicates;
+      }
+
+      console.log(unique(array6));
+    </script>
+  </body>
+</html>
