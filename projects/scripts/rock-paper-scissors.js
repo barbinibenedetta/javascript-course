@@ -8,13 +8,29 @@ updateScoreElement();
 
 /*
 if (!score) {
-score = {
-  wins: 0,
-  losses: 0,
-  ties: 0
-}
+  score = {
+    wins: 0,
+    losses: 0,
+    ties: 0
+  }
 }
 */
+
+let isAutoPlaying = false;
+let intervalId;
+
+function autoPlay() {
+  if (!isAutoPlaying) {
+    intervalId = setInterval(function() {
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 1000);
+    isAutoPlaying = true;
+  } else {
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+  }
+};
 
 function playGame(playerMove) {
 const computerMove = pickComputerMove();
@@ -65,7 +81,7 @@ document.querySelector('.js-result')
   .innerHTML = result;
 
 document.querySelector('.js-moves')
-  .innerHTML = `You <img src="/pics/${playerMove}-emoji.png" class="move-icon"> <img src="/pics/${computerMove}-emoji.png" class="move-icon"> Computer`;
+  .innerHTML = `You <img src="/javascript-course/pics/${playerMove}-emoji.png" class="move-icon"> <img src="/javascript-course/pics/${computerMove}-emoji.png" class="move-icon"> Computer`;
 }
 
 function updateScoreElement() {
