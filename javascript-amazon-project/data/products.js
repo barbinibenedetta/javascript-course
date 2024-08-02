@@ -1,5 +1,35 @@
 const products = [
   {
+    id: "1",
+    image: "images/products/umbrella.jpg",
+    name: "Green Small Umbrella",
+    rating: {
+      stars: 4,
+      count: 112
+    },
+    priceCents: 1045,
+    keywords: [
+      "umbrella",
+      "accessories",
+      "apparel"
+    ]
+  },
+  {
+    id: "2",
+    image: "images/products/backpack.jpg",
+    name: "Maroon Sportsy Backpack",
+    rating: {
+      stars: 3.5,
+      count: 14
+    },
+    priceCents: 2790,
+    keywords: [
+      "accessories",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
     name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
