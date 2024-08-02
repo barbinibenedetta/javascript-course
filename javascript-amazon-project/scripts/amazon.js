@@ -90,16 +90,16 @@ function displayAddedMessage(productId) {
   addedMessageTimeouts[productId] = timeoutId;
 }
 
-  document.querySelectorAll('.js-add-to-cart')
-    .forEach((button) => {
-      button.addEventListener('click', () => {
-        const { productId } = button.dataset;
+document.querySelectorAll('.js-add-to-cart')
+  .forEach((button) => {
+    button.addEventListener('click', () => {
+      const { productId } = button.dataset;
 
-        const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
-        const quantity = Number(quantitySelector.value);
+      const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
+      const quantity = Number(quantitySelector.value);
 
-        addToCart(productId, quantity);
-        updateCartQuantity();
-        displayAddedMessage(productId);
-      });
+      addToCart(productId, quantity);
+      updateCartQuantity();
+      displayAddedMessage(productId);
     });
+  });
